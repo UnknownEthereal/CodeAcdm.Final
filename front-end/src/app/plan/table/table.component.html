@@ -1,0 +1,8 @@
+<h3 *ngIf="table.name">{{ table.name}} </h3>
+<h3 *ngIf="table.dueDate">{{ table.dueDate | date}} </h3>
+<div class="table"
+	 [ngClass]="isTaken === false ? '' : 'taken'"
+	 (click)="onReservationClick()">
+	<h3>Table for {{ table.chairAmount }} </h3>
+	<p>Reserved</p>
+</div>
